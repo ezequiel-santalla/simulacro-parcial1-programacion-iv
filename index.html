@@ -1,48 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRUD de Extraterrestres</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <h1 class="title">CRUD de Extraterrestres</h1>
-    </header>
-    <main class="main">
-      <section>
-        <form class="alien-form" id="alien-form">
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" name="name" required />
+<html lang="es">
 
-          <label for="planet">Planeta:</label>
-          <input type="text" id="planet" name="planet" required />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD de Dioses - Pre con Botones</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-          <label for="power">Poder:</label>
-          <input type="text" id="power" name="power" required />
+<body>
+  <header class="header">
+    <h1 class="header-title">CRUD de Dioses</h1>
+  </header>
 
-          <button id="save-alien-button" type="submit">Agregar extraterrestre</button>
-        </form>
-      </section>
+  <main class="main">
+    <section class="form-section">
+      <form id="god-form" class="form">
+        <label for="god-name">Nombre:</label>
+        <input type="text" id="god-name" class="form-input" required />
 
-      <section>
-        <table class="alien-table">
-          <thead class="alien-table-header">
-            <tr>
-              <th>Id</th>
-              <th>Nombre</th>
-              <th>Planeta</th>
-              <th>Poder</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody class="alien-table-body" id="alien-table-data"></tbody>
-        </table>
-      </section>
-    </main>
-    <footer class="footer">© Derechos reservados 2025 - Ezequiel Santalla</footer>
-  </body>
+        <label for="god-domain">Dominio:</label>
+        <input type="text" id="god-domain" class="form-input" required />
 
-  <script src="/script.js"></script>
+        <label for="god-symbol">Símbolo:</label>
+        <input type="text" id="god-symbol" class="form-input" required />
+
+        <label for="god-power">Poder:</label>
+        <input type="text" id="god-power" class="form-input" required />
+
+        <button id="god-save-btn" class="btn btn-add-god" type="submit">Agregar dios</button>
+      </form>
+    </section>
+
+    <section class="god-section">
+      <button id="god-toggle-view" class="btn btn-simple-god">Mostrar solo nombre y dominio de dioses</button>
+
+      <div class="god-attr-container">
+        <label for="god-attr">Atributo a traer:</label>
+        <input type="text" id="god-attr" class="form-input" placeholder="Ej: nombre, dominio, poder" />
+        <button id="god-fetch-attr-btn" class="btn btn-attribute-god">Mostrar atributo para todos los dioses</button>
+      </div>
+
+      <div id="god-list" class="god-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">© Derechos reservados 2025 - Ezequiel Santalla</footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
